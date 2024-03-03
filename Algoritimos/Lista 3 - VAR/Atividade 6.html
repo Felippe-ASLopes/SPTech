@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body>
+        <h2>Escolha 2 números</h2><br>
+        <input type="number" name="um" id="input_um">
+        <input type="number" name="dois" id="input_dois"><br>
+        <button onclick="soma()">Somar</button>
+        <button onclick="subitrair()">Subitrair</button>
+        <button onclick="multiplicar()">Multiplicar</button>
+        <button onclick="dividir()">Dividir</button>
+    </body>
+</html>
+<script>
+    function soma(){
+        var s = (Number(input_um.value) + Number(input_dois.value))
+        alert (`A soma entre ${input_um.value} e ${input_dois.value} é ${s}`)
+    }
+    function subitrair(){
+        var sub = (Number(input_um.value) - Number(input_dois.value))
+        alert (`A subtração entre ${input_um.value} e ${input_dois.value} é ${sub}`)
+    }
+    function multiplicar(){
+        var m = (Number(input_um.value) * Number(input_dois.value))
+        alert (`A multiplicação entre ${input_um.value} e ${input_dois.value} é ${m}`)
+    }
+    function dividir (){
+        var d = (Number(input_um.value) / Number(input_dois.value))
+        alert (`A dividição entre ${input_um.value} e ${input_dois.value} é ${d}`)
+    }
+</script>

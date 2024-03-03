@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        Insira suas 3 notas <br>
+        <input type="number" id="input_nota1">
+        <input type="number" id="input_nota2">
+        <input type="number" id="input_nota3"><br>
+        <button onclick="cal()">Analisar desempenho</button>
+        <div id="x"></div>
+    </body>
+</html>
+
+<script>
+    function cal(){
+        var nota = ((Number(input_nota1.value) + Number(input_nota2.value) + Number(input_nota3.value)) / 3 )
+        
+        x.innerHTML = `Sua media é: ${nota}.<br>`
+        
+        if (nota > 9.4) {
+            x.innerHTML += `Parabéns, você é um aluno fora de série!`
+        }
+    }
+</script>

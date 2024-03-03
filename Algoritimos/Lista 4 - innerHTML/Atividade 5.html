@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        <h2>Qual é o valor da passagem?</h2>
+        <input type="number" id="input_$"><br>
+        <h2>Quantas viagens você faz por mês?</h2>
+        <input type="number" id="input_qtd"><br>
+        <h2>Qual é a distancia do trabalho até sua casa (em km)</h2>
+        <input type="number" id="input_km"><br>
+        <button onclick="cal()">Calcular VT</button>
+        <p id=x></p>
+    </body>
+</html>
+
+<script>
+    function cal(){
+        var viagensOnibus = (Number(input_qtd.value) * 0.9)
+        var valorUber = (Number(input_km.value) * 0.75)
+        var viagensUber = (Number(input_qtd.value) * 0.1)
+        var total = ((Number(viagensUber) * Number(valorUber)) + (Number(viagensOnibus) * Number(input_$.value)))
+        
+        x.innerHTML = `Você vai gastar R$${total} por mês com transporte.`
+    }
+</script>

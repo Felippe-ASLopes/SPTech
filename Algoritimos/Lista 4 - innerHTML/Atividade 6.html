@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <h2>Qual é o KI do Sayajin?</h2>
+        <input type="number" id="input_ki"><br>
+        <h2>Transformar em...</h2><br>
+        <button onclick="ssj1()">SSJ</button>
+        <button onclick="ssj2()">SSJ2</button>
+        <button onclick="ssj3()">SSJ3</button>
+        <p id="x"></p>
+    </body>
+</html>
+
+<script>
+    function ssj1(){
+    var super1 = (Number(input_ki.value) * 50)
+    x.innerHTML = `Após se transformar em SSJ, o KI desse Sayajin passa a ser de ${super1}!`
+    }
+    function ssj2(){
+    var super2 = (Number(input_ki.value) * 100)
+    x.innerHTML = `Após se transformar em SSJ2, o KI desse Sayajin passa a ser de ${super2}!`
+    }
+    function ssj3(){
+    var super3 = (Number(input_ki.value) * 200)
+    x.innerHTML = `Após se transformar em SSJ3, o KI desse Sayajin passa a ser de ${super3}!`
+    }
+</script>

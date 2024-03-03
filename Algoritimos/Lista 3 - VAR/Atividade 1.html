@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+    <h1>Insira sua idade</h1>
+    <input type="number" name="idade" id="input_idade"><br>
+    <button onclick="h()">Aposentadoria Homem</button>
+    <button onclick="m()">Aposentadoria Mulher</button>
+    
+</body>
+</html>
+
+<script>
+    function h(){
+
+ var aphomem = (Number(70) - input_idade.value)
+
+ alert(`Restam ${aphomem} anos para voce se aposentar!`)
+    }
+
+    function m(){
+        var apmulher = (Number(60) - input_idade.value)
+
+        alert(`Restam ${apmulher} anos para voce se aposentar!`)
+    }
+</script>

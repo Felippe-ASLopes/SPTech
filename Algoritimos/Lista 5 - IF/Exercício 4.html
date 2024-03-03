@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        Qual valor da pizza?
+        <input type="number" id="input_valor"><br>
+        Quantos amigos?
+        <input type="number" id="input_amigos"><br>
+        <button onclick="cal()">Rola a pizza?</button>
+        <div id="x"></div>
+    </body>
+</html>
+
+<script>
+    function cal(){
+        var calc = (Number(input_valor.value) / Number(input_amigos.value))
+
+        x.innerHTML = `Cada amigo vai pagar ${calc} reais pela pizza.<br>`
+        
+        if (calc > 20) {
+            x.innerHTML += `Deu ruim, a pizza tá muito cara :(`
+        }
+    }
+</script>

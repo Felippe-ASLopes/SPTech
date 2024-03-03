@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <input type="number" id="input_a"><br>
+        <input type="number" id="input_b"><br>
+        <input type="number" id="input_branco"><br>
+        <input type="number" id="input_nulo"><br>
+        <button onclick="resultado()">Resultado da Eleição</button>
+        <div id="x"></div>
+    </body>
+</html>
+
+<script>
+    function resultado(){
+        var soma = (Number(input_a.value) + Number(input_b.value) + Number(input_branco.value) + Number(input_nulo.value))
+        var pa = ((Number(input_a.value) / soma) * 100)
+        var pb = ((Number(input_b.value) / soma)* 100)
+        var inv = (Number(input_branco.value) + Number(input_nulo.value))
+        var pinv = (((Number(input_branco.value) + Number(input_nulo.value)) / soma) * 100)
+
+        x.innerHTML = `Total de votos: ${soma}</br>
+Candidato A: ${pa}% (${input_a.value})</br>
+Candidato B: ${pb}% (${input_b.value})</br>
+Inválidos: ${pinv}% (${inv})`
+    }
+</script>

@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Índice de Massa Corporal</h1>
+        <h3>Preencha suas informações abaixo</h3>
+        <p>Nome completo: <input type="text" id="input_nome"></p>
+        <p>Peso (em quilogramas): <input type="number" id="input_peso"></p>
+        <p>Altura (em metros): <input type="number" id="input_altura"></p>
+        <button onclick="calcular()">Calcular IMC</button>
+    </body>
+</html>
+
+<script>
+    function calcular(){
+        var imc = (Number(input_peso.value) / (Number(input_altura.value)**2))
+        var ft = (Number(input_altura.value) * 3.28)
+        var oz = (Number(input_peso.value) * 35.274)
+        var imc2 = (oz / (ft**2))
+
+alert (`${input_nome.value} o seu IMC é: ${imc}. 
+Convertendo para pés e onças, a sua altura é: ${ft}ft, 
+seu peso é: ${oz}oz, 
+e o seu IMC em pés/onças² é: ${imc2}!`)
+    }
+</script>

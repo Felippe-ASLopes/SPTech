@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        Quantas latas de refrigerante você toma por dia?<br>
+        <input type="number" id="input_refri">
+        <button onclick="cal()">Quantos refris?</button>
+        <div id="x"></div>
+    </body>
+</html>
+
+<script>
+    function cal(){
+        var ano = Number(input_refri.value) * 365
+
+        x.innerHTML = `Voce toma ${ano} refris por ano.<br>`
+
+        if (ano > 500){
+        x.innerHTML += `Cuidado com a diabetes.`
+        }
+    }
+</script>

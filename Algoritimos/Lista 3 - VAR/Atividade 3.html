@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <h3>Qual é o valor da passagem?</h3>
+        <input type="number" name="v" id="input_valor"><br>
+        <h3>Quantas viagens você fará por mês?</h3>
+        <input type="number" name="p" id="input_passagens"><br>
+        <button onclick="eco()">Ver economia</button>
+    </body>
+</html>
+
+<script>
+    function eco(){
+    var economia = (Number(input_valor.value * 0.5) * Number(input_passagens.value))
+
+    alert (`Voce economizara R$${economia} por mes!`)
+    }
+</script>

@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <h4>Escolha o sabor</h4>
+        <input id="input_sabor"><br>
+        <h4>Qual o valor?</h4>
+        <input type="number" id="input_valor"><br>
+        <h4>Qauntos amigos?</h4>
+        <input type="number" id="input_amigo"><br>
+        <button onclick="cal()" id="button_cal">Ver valor por amigo</button>
+        <p id="x"></p>
+    </body>
+</html>
+
+<script>
+    function cal(){
+        var valor = (Number(input_valor.value) / Number(input_amigo.value))
+
+        button_cal.innerHTML = (`Bom apetite!`)
+
+        x.innerHTML = (`Cada amigo vai colaborar com R$${valor} para a pizza de ${input_sabor.value}.`)
+    }
+</script>

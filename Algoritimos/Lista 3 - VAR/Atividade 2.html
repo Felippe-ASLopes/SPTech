@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <h2>Quantos amigos?</h2>
+        <input type="number" name="a" id="input_amigos"><br>
+        <h2>Qual é o valor?</h2>
+        <input type="number" name="v" id="input_valor"><br>
+        <button onclick="pizza()">#LovePizza</button>
+    </body>
+</html>
+
+<script>
+    function pizza(){
+        var preco = (Number(input_valor.value) / Number(input_amigos.value))
+
+        alert (`Cada um dos ${input_amigos.value} amigos vai pagar R$ ${preco}`)
+    }
+</script>

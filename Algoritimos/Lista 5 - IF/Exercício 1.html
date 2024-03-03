@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        Qual sua idade?
+        <input type="Number" id="input_idade">
+        <button onclick="festa()">Ir para festa</button>
+        <div id="x"></div>
+    </body>
+</html>
+
+<script>
+    function festa(){
+        if (input_idade.value < 18) {
+        x.innerHTML = `Pedir permissao para o responsavel <br>`
+    }
+        x.innerHTML += `#PartilFestas!`
+    }
+</script>

@@ -1,0 +1,35 @@
+<html>
+    <head></head>
+    <body>
+        <input type="number" id="input_n">
+        <button onclick="tab()">Ver Tabuada</button>
+        <div id="x"></div>
+    
+    </body>
+</html>
+
+<script>
+    function tab(){
+        var dois = (Number(input_n.value) * 2)
+        var tres = (Number(input_n.value) * 3)
+        var quatro = (Number(input_n.value) * 4)
+        var cinco =(Number(input_n.value) * 5)
+        var seis = (Number(input_n.value) * 6)
+        var sete = (Number(input_n.value) * 7)
+        var oito = (Number(input_n.value) * 8)
+        var nove = (Number(input_n.value) * 9)
+        var dez = (Number(input_n.value) * 10)
+
+        x.innerHTML = `${input_n.value} x 0 = 0</br>
+        ${input_n.value} x 1 = ${input_n.value}</br>
+        ${input_n.value} x 2 = ${dois}</br>
+        ${input_n.value} x 3 = ${tres}</br>
+        ${input_n.value} x 4 = ${quatro}</br>
+        ${input_n.value} x 5 = ${cinco}</br>
+        ${input_n.value} x 6 = ${seis}</br>
+        ${input_n.value} x 7 = ${sete}</br>
+        ${input_n.value} x 8 = ${oito}</br>
+        ${input_n.value} x 9 = ${nove}</br>
+        ${input_n.value} x 10 = ${dez}`
+    }
+</script>

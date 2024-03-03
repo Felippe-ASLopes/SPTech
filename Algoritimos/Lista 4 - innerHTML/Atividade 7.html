@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <h2>Qual sua altura?</h2>
+        <input type="number" id="input_altura"><br>
+        <h2>Qual seu peso?</h2>
+        <input type="number" id="input_peso"><br>
+        <button onclick="cal()">Calcular IMC</button>
+        <p id="x"></p>
+    </body>
+</html>
+
+<script>
+    function cal(){
+        var imc = (Number(input_peso.value) / (Number(input_altura.value) * Number(input_altura.value)))
+        x.innerHTML = `Seu IMC é ${imc}!`
+    }
+</script>

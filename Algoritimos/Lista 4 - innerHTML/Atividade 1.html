@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <input type="number" id="input_hrs">
+        <button onclick="sono()">Calcular sono</button>
+        <div id="x"></div>
+    </body>
+</html>
+
+<script>
+    function sono(){
+        var fase1 = (Number(input_hrs.value) * Number(0.05))
+        var fase2 = (Number(input_hrs.value) * Number(0.45))
+        var fase3 = (Number(input_hrs.value) * Number(0.3))
+        var rem = (Number(input_hrs.value) * Number(0.2))
+
+        x.innerHTML = `Ao dormir ${input_hrs.value} horas, você dormiu:</br>
+        ${fase1} horas na fase 1</br>
+        ${fase2} horas na fase 2</br>
+        ${fase3} horas na fase 3</br>
+        ${rem} horas na fase REM.`
+    }
+</script>
