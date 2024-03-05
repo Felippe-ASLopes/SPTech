@@ -11,16 +11,13 @@
 <script>
     function cal(){
         
-        var conta = (input_kwh.value * 10)
-        var desconto = (conta * 0.9)
+        var conta = (input_kwh.value * 0.85)
 
-        alert (`Você pagará ${conta} reais na sua conta de luz.`)
+
 
         if (Number(input_kwh.value) < 100){
-           
-alert (`Porém como seu consumo foi menor que 100 kw/h voce recebeu um desconto de 10%
-logo você pagará ${desconto} reais na sua conta de luz!`)
-          
+          conta = (conta * 0.9)
         }
+        alert (`Você pagará ${conta} reais na sua conta de luz.`)
     }
 </script>
