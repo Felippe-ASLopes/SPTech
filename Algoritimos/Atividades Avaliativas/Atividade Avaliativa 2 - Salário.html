@@ -1,0 +1,49 @@
+<html>
+    <head></head>
+    <body>
+        Insira o valor do salário: <br>
+        <input type="number" id="input_salario"> <br>
+        Insira o valor do adicional mensal: <br>
+        <input type="number" id="input_add"><br>
+        Insira o valor do bônus do usuário: <br>
+        <input type="number" id="input_bonus"> <br>
+        <button onclick="calc()">Analisar minha renda</button>
+        <div id="x"></div>
+    </body>
+</html>
+
+<script>
+    function calc(){
+
+        var bruto = Number(input_salario.value) + Number(input_add.value) + Number(input_bonus.value)
+        var ir = bruto * 0.125
+        var total = bruto
+
+        if (bruto >= 10000){
+            total = bruto - ir
+        }
+        else {
+            ir = 0
+        }
+
+        var inss = total * 0.1
+        var fgts = total * 0.08
+        
+        total = total - inss - fgts
+
+        x.innerHTML = `<b>ANÁLISE DA SUA RENDA</b><br>
+Com o salário de <b>R$${input_salario.value}</b>, com adicional de <b>R$${input_add.value}</b> e bônus de <b>R$${input_bonus.value}</b>, você tem: <br> 
+Bruto: <b>R$${Number(input_salario.value) + Number(input_add.value) + Number(input_bonus.value)}</b><br>
+IR: <b>R$${ir}</b><br>
+INSS: <b>R$${inss}</b><br>
+FGTS: <b>R$${fgts}</b><br>
+Líquido: <b>R$${total}</b>.`
+
+        if (total > 2500){
+            x.innerHTML += `<br>Com a renda de <b>R$${total}</b>, é recomendado poupar <b>R$${total * 0.15}</b>, para que em um ano tenha poupado <b>R$${(total * 0.15) * 12}</b>`
+        }   
+        else{
+            x.innerHTML += `<br>Com a renda de <b>R$${total}</b>, é recomendado obter renda extra para realizar uma poupança.`
+        }
+    }
+</script>
