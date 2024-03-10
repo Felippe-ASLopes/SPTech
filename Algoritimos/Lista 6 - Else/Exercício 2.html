@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        Insira o saldo da conta: <br>
+        <input type="number" id="input_saldo"><br>
+        Insira o valor do débito: <br>
+        <input type="number" id="input_debito"><br>
+        <button onclick="calc()">Analisar conta</button>
+        <div id="x"></div>
+    </body>
+</html>
+
+<script>
+    function calc(){
+        var total = Number(input_saldo.value) - Number(input_debito.value)
+        
+        if (total > 0){
+            x.innerHTML = `<i style= "color: blue;">Seu saldo atual da conta corrente é ${total} reais.</i>`
+        }
+        else {
+            x.innerHTML = `<b style= "color: red;">Seu saldo atual da conta corrente é ${total} reais.</b>`
+        }
+    }
+</script>

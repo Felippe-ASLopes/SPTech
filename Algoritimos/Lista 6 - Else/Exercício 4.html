@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        Insira sua frequencia (em porcentagem): <br>
+        <input type="number" id="input_frequencia"><br>
+        <button onclick="analisar()">Analisar frequência</button>
+        <div id="x"></div>
+    </body>
+</html>
+
+<script>
+    function analisar(){
+        if (input_frequencia.value >= 50){
+            x.innerHTML = `<img src="https://media.istockphoto.com/id/1480277406/pt/foto/graduation-group-and-back-view-of-students-celebrate-education-success-behind-of-excited.jpg?s=1024x1024&w=is&k=20&c=VAXi4yLLrRP_CfII5LBLgWF42XR_aTJRp51VajXSaXc="></img>`
+        }
+        else {
+            x.innerHTML = `<img src="https://media.istockphoto.com/id/1392494733/pt/foto/woman-with-pink-suitcase-and-amerian-passport-standing-on-passengers-ladder-of-airplane.jpg?s=1024x1024&w=is&k=20&c=9e9BcES8c1gcwPA8lhO2JSZZl8vItGlQ1zMSN3Nl40w="></img>`
+        }
+    }
+</script>

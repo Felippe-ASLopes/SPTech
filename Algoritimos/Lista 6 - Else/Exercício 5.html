@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        Insira sua primeira nota: <br>
+        <input type="number" id="input_nota1"><br>
+        Insira sua segunda nota: <br>
+        <input type="number" id="input_nota2"><br>
+        <button onclick="calc()">Verificar situação</button>
+        <div id="x"></div>
+    </body>
+</html>
+
+<script>
+    function calc(){
+        var media = (Number(input_nota1.value) + Number(input_nota2.value)) / 2
+
+        if (media >= 6){
+            x.innerHTML = `Parabéns, aprovado!`
+        }
+        else{
+            x.innerHTML = `Tente outra vez...`
+        }
+    }
+</script>

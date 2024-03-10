@@ -1,0 +1,23 @@
+<html>
+
+<head></head>
+
+<body>
+    Insira a temperatura do ambiente: <br>
+    <input type="number" id="input_temp"><br>
+    <button onclick="verif()">verificar clima</button>
+    <div id="x"></div>
+</body>
+
+</html>
+
+<script>
+    function verif() {
+        if (input_temp.value < 10) {
+            x.innerHTML = `<img src="https://media.istockphoto.com/id/1312267010/pt/foto/background-of-many-banana-pieces-overhead-view-studio-food-photography.jpg?s=1024x1024&w=is&k=20&c=A7L7HTqp7g8wZa7Ba3oDosKo5Szoj6iPabq_BV0u7RA="></img>`
+        }
+        else {
+            x.innerHTML = `<img src="https://img.freepik.com/fotos-gratis/banana-madura-descascada-em-close_23-2148666761.jpg?w=740&t=st=1709739018~exp=1709739618~hmac=f45eb8a59ee141d0e048810269bac96d6e791e6bf06f2e5a13b4c62c0b884b4f">`
+        }
+    }
+</script>

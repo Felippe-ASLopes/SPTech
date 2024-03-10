@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        Insira a quantidade de chocolates de deseja: <br>
+        <input type="number" id="input_choco"><br>
+        <button onclick="calc()">comprar</button>
+        <div id="x"></div>
+    </body>
+</html>
+
+<script>
+    function calc(){
+        var total = Number(input_choco.value)
+
+        if (input_choco.value > 12){
+            total = total * 2.5
+        }
+        else{
+            total = total * 3
+        }
+
+        x.innerHTML = `O valor da sua compra é ${total} reais.`
+    }
+</script>

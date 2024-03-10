@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        Digite seu nome: <br>
+        <input id="input_nome"><br>
+        Digite a sua idade: <br>
+        <input type="number" id="input_idade"><br>
+        <button onclick="avaliar()">Avaliar aluno</button>
+    </body>
+</html>
+
+<script>
+    function avaliar(){
+        if (input_idade.value >= 18){
+            alert (`${input_nome.value} vem tirar a sua CNH!`)
+        }
+        else{
+            alert (`${input_nome.value} vai jogar Playstation`)
+        }
+    }
+</script>
