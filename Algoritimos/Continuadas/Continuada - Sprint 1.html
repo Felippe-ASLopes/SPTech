@@ -1,0 +1,56 @@
+<html>
+    <head></head>
+    <body>
+        Insira a quantidade de energia consumida em kWh: <br>
+        <input type="number" id="input_kwh"> <br>
+        Qual é a bandeira tarifária da energia ("vermelha", "amarela" ou "verde"): <br>
+        <input type="text" id="input_bandeira"> <br>
+        Insira o volume de água consumido em litros: <br>
+        <input type="number" id="input_agua"> <br>
+        Insira a quantidade de vazamentos de água na casa: <br>
+        <input type="number" id="input_vazamento"> <br>
+        Insira o volume de gás consumido em litros: <br>
+        <input type="number" id="input_gas"> <br>
+        Insira a quantidade de MB (megabyte) do plano de internet: <br>
+        <input type="number" id="input_mb"> <br>
+        Possui uma linha telefônica vinculada ao plano de internet? ("sim" ou "não"): <br>
+        <input type="text" id="input_telefone"> <br>
+        <button onclick="calcular()">Calcular Despesas Fixas</button>
+        <div id="x"></div>
+    </body>
+</html>
+
+<script>
+    function calcular(){
+        var contaEnergia = Number(input_kwh.value)
+        var bandeira = input_bandeira.value 
+        var contaAgua = (input_agua.value * 3.5) + (input_vazamento.value * 10)
+        var contaGas = input_gas.value * 2.5
+        var contaInternet = input_mb.value * 0.8
+        
+        if (input_bandeira.value == "verde"){
+            contaEnergia = input_kwh.value * 0.75
+        }
+        if (input_bandeira.value == "amarela"){
+            contaEnergia = input_kwh.value * 0.9
+        }
+        if (input_kwh.value <= 50){
+            contaEnergia = contaEnergia * 0.9
+        }
+
+        if (input_telefone.value == "sim"){
+            contaInternet = contaInternet * 1.25
+        }
+        else{
+            contaInternet = contaInternet * 0.925
+        }
+
+        var total = contaEnergia + contaAgua + contaGas + contaInternet
+
+        x.innerHTML = `Com o consumo de <b>${input_kwh.value}</b> kWh na bandeira <b>${input_bandeira.value}</b>, a conta de energia totaliza <b>R$ ${contaEnergia}</b>. <br> 
+        Com o consumo de <b>${input_agua.value}</b> litros de água contendo <b>${input_vazamento.value}</b> vazamentos, a conta de água totaliza <b>R$ ${contaAgua}</b>. <br>
+        Com o consumo de <b>${input_gas.value}</b> litros de gás, a conta de gás totaliza R$ <b>${contaGas}</b>. <br>
+        Com o consumo de <b>${input_mb.value}</b> MB de internet, o valor do plano de internet/telefone totaliza R$ <b>${contaInternet}</b>. <br>
+        Gasto total de despesas mensal: <b>R$ ${total}</b>. `
+    }
+</script>
