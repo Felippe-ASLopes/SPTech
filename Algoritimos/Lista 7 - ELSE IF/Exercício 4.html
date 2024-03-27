@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        Insira o peso: <br>
+        <input type="number" id="input_peso"> <br>
+        <button onclick="analisar()">Analisar peso</button>
+        <div id="resultado"></div>
+    </body>
+</html>
+
+<script>
+    function analisar(){
+        if (input_peso.value <= 13.5){
+            resultado.innerHTML = `Abaixo do peso`
+        }
+        else if(input_peso.value == 18.3){
+            resultado.innerHTML = `Peso perfeito`
+        }
+        else if(input_peso.value >= 21.2){
+            resultado.innerHTML = `Acima do peso`
+        }
+        else{
+            resultado.innerHTML = `Peso na média`
+        }
+    }
+</script>

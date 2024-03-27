@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        Insira a temperatura:<br>
+        <input type="number" id="input_temp"> <br>
+        <button onclick="analisar()">Analisar temperatura</button>
+        <div id="resultado"></div>
+    </body>
+</html>
+
+<script>
+    function analisar(){
+        if(input_temp.value <= 14){
+            resultado.innerHTML = `Congelante`
+        }
+        else if(input_temp.value <= 21){
+            resultado.innerHTML = `Frio`
+        }
+        else if(input_temp.value <= 24){
+            resultado.innerHTML = `Confortável`
+        }
+        else if(input_temp.value <= 31){
+            resultado.innerHTML = `Calor`
+        }
+        else {
+            resultado.innerHTML = `Calor escaldante`
+        }
+    }
+</script>

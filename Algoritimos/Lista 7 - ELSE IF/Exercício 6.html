@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <div id="background">
+        Qual time de São Paulo você torce? <br>
+        <input type="text" id="input_time"> <br>
+        <button onclick="time()">Fale sobre o time</button> <br>
+        <div id="resultado"></div>
+        </div>
+    </body>
+</html>
+
+<script>
+    function time(){
+        if (input_time.value == "Corinthians"){
+            resultado.innerHTML = `<b style = "background-color: black; color: white">Salve o Corinthians</b>`
+        }
+        else if(input_time.value == "Palmeiras"){
+            resultado.innerHTML = `<b style = "background-color: green; color: white">Salve o alviverde imponente</b>`
+        }
+        else if(input_time.value == "Santos"){
+            resultado.innerHTML = `<b>Agora quem dá a bola é o Santos</b>`
+        }
+        else if(input_time.value == "São Paulo"){
+            resultado.innerHTML = `<b style = "background-color: black; color: red">Salve o Tricolor paulista</b>`
+        }
+
+    }
+</script>
